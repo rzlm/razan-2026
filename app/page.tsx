@@ -1,65 +1,101 @@
-import Image from "next/image";
+"use client"
 
-export default function Home() {
+import { useState } from "react"
+import { TitleBar } from "@/components/ide/TitleBar"
+import { ActivityBar } from "@/components/ide/ActivityBar"
+import { Sidebar } from "@/components/ide/Sidebar"
+import { TabBar } from "@/components/ide/TabBar"
+import { StatusBar } from "@/components/ide/StatusBar"
+import { HomePanel } from "@/components/panels/HomePanel"
+import { ProjectsPanel } from "@/components/panels/ProjectsPanel"
+import { ExperiencePanel } from "@/components/panels/ExperiencePanel"
+import { AboutPanel } from "@/components/panels/AboutPanel"
+import { ArticlesPanel } from "@/components/panels/ArticlesPanel"
+import { GithubPanel } from "@/components/panels/GithubPanel"
+
+export type FileId = "home" | "projects" | "experience" | "about" | "articles" | "github"
+
+export const FILES: { id: FileId; filename: string }[] = [
+  { id: "home", filename: "home.tsx" },
+  { id: "projects", filename: "projects.tsx" },
+  { id: "experience", filename: "experience.tsx" },
+  { id: "about", filename: "about.tsx" },
+  { id: "articles", filename: "articles.tsx" },
+  { id: "github", filename: "github.tsx" },
+]
+
+export default function Page() {
+  const [activeFile, setActiveFile] = useState<FileId>("home")
+  const [openFiles, setOpenFiles] = useState<FileId[]>(["home"])
+  const [sidebarOpen, setSidebarOpen] = useState(false)
+
+  const handleFileOpen = (id: FileId) => {
+    if (!openFiles.includes(id)) {
+      setOpenFiles((prev) => [...prev, id])
+    }
+    setActiveFile(id)
+    setSidebarOpen(false)
+  }
+
+  const handleTabClose = (id: FileId) => {
+    const newOpen = openFiles.filter((f) => f !== id)
+    setOpenFiles(newOpen)
+    if (activeFile === id) {
+      setActiveFile(newOpen[newOpen.length - 1] ?? "home")
+    }
+  }
+
+  function renderPanel() {
+    switch (activeFile) {
+      case "home":
+        return <HomePanel onNavigate={handleFileOpen} />
+      case "projects":
+        return <ProjectsPanel />
+      case "experience":
+        return <ExperiencePanel />
+      case "about":
+        return <AboutPanel />
+      case "articles":
+        return <ArticlesPanel />
+      case "github":
+        return <GithubPanel />
+    }
+  }
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <div
+      className="flex flex-col h-screen overflow-hidden"
+      style={{ background: "var(--color-vscode-editor)", color: "#d4d4d4" }}
+    >
+      <TitleBar onMenuClick={() => setSidebarOpen((v) => !v)} />
+
+      <div className="flex flex-1 overflow-hidden">
+        <ActivityBar />
+
+        <Sidebar
+          activeFile={activeFile}
+          onFileOpen={handleFileOpen}
+          mobileOpen={sidebarOpen}
+          onMobileClose={() => setSidebarOpen(false)}
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+
+        {/* Editor column */}
+        <div className="flex flex-col flex-1 overflow-hidden min-w-0">
+          <TabBar
+            openFiles={openFiles}
+            activeFile={activeFile}
+            onTabClick={setActiveFile}
+            onTabClose={handleTabClose}
+          />
+
+          {/* Editor content */}
+          <main className="flex-1 overflow-hidden">
+            {renderPanel()}
+          </main>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      </div>
+
+      <StatusBar activeFile={activeFile} />
     </div>
-  );
+  )
 }
