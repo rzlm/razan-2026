@@ -6,7 +6,7 @@ export const PROFILE = {
   tagline: "Building fast, beautiful, and accessible digital experiences.",
   location: "Dubai, UAE",
   email: "razan@example.com",
-  github: "https://github.com/razanmohamed",
+  github: "https://github.com/rzlm",
   linkedin: "https://linkedin.com/in/razanmohamed",
   twitter: "https://twitter.com/razanmohamed",
   website: "https://razanmohamed.dev",
@@ -184,7 +184,7 @@ export const SKILLS = {
 }
 
 export const GITHUB_STATS = {
-  username: "razanmohamed",
+  username: "rzlm",
   repos: 42,
   stars: 318,
   followers: 210,

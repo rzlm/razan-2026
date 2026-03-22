@@ -1,41 +1,41 @@
-import { ExternalLink, Github, Star } from "lucide-react"
+import { ExternalLink, Github } from "lucide-react"
 import { PROJECTS } from "@/lib/portfolio-data"
 
 const TECH_COLORS: Record<string, { bg: string; text: string }> = {
-  "Next.js": { bg: "#1e293b", text: "#94a3b8" },
-  "React": { bg: "#1e3a4a", text: "#7dd3fc" },
-  "TypeScript": { bg: "#1e2d4a", text: "#60a5fa" },
-  "Node.js": { bg: "#1a3a2a", text: "#4ade80" },
-  "Tailwind CSS": { bg: "#1e3040", text: "#38bdf8" },
-  "PostgreSQL": { bg: "#2a2040", text: "#a78bfa" },
-  "Prisma": { bg: "#1a2a3a", text: "#7dd3fc" },
-  "Redis": { bg: "#3a1a1a", text: "#f87171" },
-  "Docker": { bg: "#1a2a40", text: "#60a5fa" },
-  "Supabase": { bg: "#1a3a2a", text: "#34d399" },
-  "React Native": { bg: "#1e3a4a", text: "#7dd3fc" },
-  "Expo": { bg: "#2a2a2a", text: "#a1a1aa" },
-  "SvelteKit": { bg: "#3a2010", text: "#fb923c" },
-  "Vite": { bg: "#2a1a3a", text: "#c084fc" },
-  "Radix UI": { bg: "#2a1a2a", text: "#e879f9" },
-  "Storybook": { bg: "#3a1a2a", text: "#f472b6" },
-  "OpenAI API": { bg: "#1a3a2a", text: "#34d399" },
-  "AWS": { bg: "#3a2a10", text: "#fbbf24" },
-  "Vercel Cron": { bg: "#1a1a2a", text: "#818cf8" },
-  "Resend": { bg: "#2a1a1a", text: "#f87171" },
-  "GitHub API": { bg: "#1a2a1a", text: "#4ade80" },
-  "Dnd-kit": { bg: "#2a2a1a", text: "#fde047" },
-  "IndexedDB": { bg: "#2a1a3a", text: "#c084fc" },
-  "GraphQL": { bg: "#3a1a2a", text: "#e879f9" },
-  "SSH2": { bg: "#1a3a1a", text: "#86efac" },
-  "REST": { bg: "#2a2a1a", text: "#fde047" },
-  "Bun": { bg: "#2a2010", text: "#fcd34d" },
-  "Figma": { bg: "#3a1a1a", text: "#fb7185" },
-  "Webflow": { bg: "#1a3a40", text: "#22d3ee" },
-  "CSS Modules": { bg: "#1a2a40", text: "#60a5fa" },
+  "Next.js":      { bg: "#1a1230", text: "#a78bfa" },
+  "React":        { bg: "#1e1535", text: "#7dd3fc" },
+  "TypeScript":   { bg: "#1a1535", text: "#60a5fa" },
+  "Node.js":      { bg: "#1a3a2a", text: "#4ade80" },
+  "Tailwind CSS": { bg: "#1e1a40", text: "#c084fc" },
+  "PostgreSQL":   { bg: "#2a1a40", text: "#a78bfa" },
+  "Prisma":       { bg: "#1a1a3a", text: "#7dd3fc" },
+  "Redis":        { bg: "#3a1a2a", text: "#f9a8d4" },
+  "Docker":       { bg: "#1a1a40", text: "#67e8f9" },
+  "Supabase":     { bg: "#1a3a2a", text: "#34d399" },
+  "React Native": { bg: "#1e1535", text: "#7dd3fc" },
+  "Expo":         { bg: "#1a1230", text: "#c8b8f8" },
+  "SvelteKit":    { bg: "#3a1a10", text: "#fb923c" },
+  "Vite":         { bg: "#2a1a3a", text: "#c084fc" },
+  "Radix UI":     { bg: "#2a1230", text: "#e879f9" },
+  "Storybook":    { bg: "#3a1a2a", text: "#f472b6" },
+  "OpenAI API":   { bg: "#1a3a2a", text: "#34d399" },
+  "AWS":          { bg: "#3a2a10", text: "#fbbf24" },
+  "Vercel Cron":  { bg: "#1a1230", text: "#818cf8" },
+  "Resend":       { bg: "#2a1a2a", text: "#f9a8d4" },
+  "GitHub API":   { bg: "#1a2a1a", text: "#4ade80" },
+  "Dnd-kit":      { bg: "#2a1a30", text: "#e879f9" },
+  "IndexedDB":    { bg: "#2a1a3a", text: "#c084fc" },
+  "GraphQL":      { bg: "#3a1a2a", text: "#e879f9" },
+  "SSH2":         { bg: "#1a2a1a", text: "#86efac" },
+  "REST":         { bg: "#2a1a30", text: "#f0abfc" },
+  "Bun":          { bg: "#2a1a10", text: "#fcd34d" },
+  "Figma":        { bg: "#3a1a2a", text: "#f472b6" },
+  "Webflow":      { bg: "#1a2a40", text: "#67e8f9" },
+  "CSS Modules":  { bg: "#1a1a40", text: "#c084fc" },
 }
 
 function TechBadge({ name }: { name: string }) {
-  const colors = TECH_COLORS[name] ?? { bg: "#1e293b", text: "#94a3b8" }
+  const colors = TECH_COLORS[name] ?? { bg: "#1a1230", text: "#a78bfa" }
   return (
     <span
       className="px-2 py-0.5 rounded text-xs"
@@ -65,16 +65,16 @@ export function ProjectsPanel() {
         className="text-xs mb-6"
         style={{ color: "var(--color-vscode-muted)", fontFamily: "var(--font-mono)" }}
       >
-        <span style={{ color: "#ce9178" }}>razan-portfolio</span>
-        <span style={{ color: "#6b6b6b" }}> › </span>
-        <span style={{ color: "#d4d4d4" }}>projects.tsx</span>
+        <span style={{ color: "#f9a8d4" }}>razan-portfolio</span>
+        <span style={{ color: "#3d2f5e" }}> › </span>
+        <span style={{ color: "#e4deff" }}>projects.tsx</span>
       </p>
 
       {/* Heading */}
       <h2
         className="mb-2"
         style={{
-          color: "#d4d4d4",
+          color: "#e4deff",
           fontFamily: "var(--font-sans)",
           fontSize: "1.75rem",
           fontWeight: 700,
@@ -106,7 +106,7 @@ export function ProjectsPanel() {
               border: "1px solid var(--color-vscode-border)",
             }}
             onMouseEnter={(e) =>
-              ((e.currentTarget as HTMLElement).style.borderColor = "#007acc66")
+              ((e.currentTarget as HTMLElement).style.borderColor = "#c084fc66")
             }
             onMouseLeave={(e) =>
               ((e.currentTarget as HTMLElement).style.borderColor = "var(--color-vscode-border)")
@@ -116,7 +116,7 @@ export function ProjectsPanel() {
             <div className="flex items-start justify-between gap-2 mb-3">
               <h3
                 style={{
-                  color: "#4ec9b0",
+                  color: "#c084fc",
                   fontFamily: "var(--font-sans)",
                   fontSize: "15px",
                   fontWeight: 600,
@@ -134,7 +134,7 @@ export function ProjectsPanel() {
                     className="cursor-pointer transition-colors duration-150"
                     style={{ color: "var(--color-vscode-muted)" }}
                     onMouseEnter={(e) =>
-                      ((e.currentTarget as HTMLElement).style.color = "#d4d4d4")
+                      ((e.currentTarget as HTMLElement).style.color = "#e4deff")
                     }
                     onMouseLeave={(e) =>
                       ((e.currentTarget as HTMLElement).style.color = "var(--color-vscode-muted)")
@@ -152,7 +152,7 @@ export function ProjectsPanel() {
                     className="cursor-pointer transition-colors duration-150"
                     style={{ color: "var(--color-vscode-muted)" }}
                     onMouseEnter={(e) =>
-                      ((e.currentTarget as HTMLElement).style.color = "#d4d4d4")
+                      ((e.currentTarget as HTMLElement).style.color = "#e4deff")
                     }
                     onMouseLeave={(e) =>
                       ((e.currentTarget as HTMLElement).style.color = "var(--color-vscode-muted)")
@@ -168,7 +168,7 @@ export function ProjectsPanel() {
             <p
               className="flex-1 mb-4"
               style={{
-                color: "#858585",
+                color: "#7b6ea6",
                 fontFamily: "var(--font-sans)",
                 fontSize: "13px",
                 lineHeight: 1.65,
@@ -210,7 +210,7 @@ export function ProjectsPanel() {
               border: "1px solid var(--color-vscode-border)",
             }}
             onMouseEnter={(e) =>
-              ((e.currentTarget as HTMLElement).style.borderColor = "#007acc66")
+              ((e.currentTarget as HTMLElement).style.borderColor = "#c084fc66")
             }
             onMouseLeave={(e) =>
               ((e.currentTarget as HTMLElement).style.borderColor = "var(--color-vscode-border)")
@@ -219,7 +219,7 @@ export function ProjectsPanel() {
             <div className="flex items-start justify-between gap-2 mb-2">
               <h4
                 style={{
-                  color: "#9cdcfe",
+                  color: "#f0abfc",
                   fontFamily: "var(--font-sans)",
                   fontSize: "14px",
                   fontWeight: 600,
@@ -256,7 +256,7 @@ export function ProjectsPanel() {
             </div>
             <p
               className="flex-1 mb-3"
-              style={{ color: "#6b6b6b", fontFamily: "var(--font-sans)", fontSize: "12px", lineHeight: 1.6 }}
+              style={{ color: "#3d2f5e", fontFamily: "var(--font-sans)", fontSize: "12px", lineHeight: 1.6 }}
             >
               {project.description}
             </p>

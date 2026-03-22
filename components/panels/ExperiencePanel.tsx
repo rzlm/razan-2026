@@ -1,11 +1,11 @@
-import { MapPin, Briefcase, Clock } from "lucide-react"
+import { MapPin, Clock } from "lucide-react"
 import { EXPERIENCE } from "@/lib/portfolio-data"
 
 const TYPE_LABELS: Record<string, { label: string; color: string; bg: string }> = {
-  "full-time": { label: "Full-time", color: "#4ec9b0", bg: "rgba(78,201,176,0.1)" },
-  "contract": { label: "Contract", color: "#dcdcaa", bg: "rgba(220,220,170,0.1)" },
-  "internship": { label: "Internship", color: "#9cdcfe", bg: "rgba(156,220,254,0.1)" },
-  "part-time": { label: "Part-time", color: "#c586c0", bg: "rgba(197,134,192,0.1)" },
+  "full-time":  { label: "Full-time",  color: "#67e8f9", bg: "rgba(103,232,249,0.1)" },
+  "contract":   { label: "Contract",   color: "#e879f9", bg: "rgba(232,121,249,0.1)" },
+  "internship": { label: "Internship", color: "#f0abfc", bg: "rgba(240,171,252,0.1)" },
+  "part-time":  { label: "Part-time",  color: "#f472b6", bg: "rgba(244,114,182,0.1)" },
 }
 
 export function ExperiencePanel() {
@@ -19,15 +19,15 @@ export function ExperiencePanel() {
         className="text-xs mb-6"
         style={{ color: "var(--color-vscode-muted)", fontFamily: "var(--font-mono)" }}
       >
-        <span style={{ color: "#ce9178" }}>razan-portfolio</span>
-        <span style={{ color: "#6b6b6b" }}> › </span>
-        <span style={{ color: "#d4d4d4" }}>experience.tsx</span>
+        <span style={{ color: "#f9a8d4" }}>razan-portfolio</span>
+        <span style={{ color: "#3d2f5e" }}> › </span>
+        <span style={{ color: "#e4deff" }}>experience.tsx</span>
       </p>
 
       <h2
         className="mb-2"
         style={{
-          color: "#d4d4d4",
+          color: "#e4deff",
           fontFamily: "var(--font-sans)",
           fontSize: "1.75rem",
           fontWeight: 700,
@@ -65,8 +65,8 @@ export function ExperiencePanel() {
                   <div
                     className="w-4 h-4 rounded-full border-2 mt-1 z-10"
                     style={{
-                      background: i === 0 ? "#007acc" : "var(--color-vscode-editor)",
-                      borderColor: i === 0 ? "#007acc" : "#4b4b4b",
+                      background: i === 0 ? "#c084fc" : "var(--color-vscode-editor)",
+                      borderColor: i === 0 ? "#c084fc" : "#2d1f4e",
                     }}
                   />
                 </div>
@@ -84,7 +84,7 @@ export function ExperiencePanel() {
                     <div>
                       <h3
                         style={{
-                          color: "#d4d4d4",
+                          color: "#e4deff",
                           fontFamily: "var(--font-sans)",
                           fontSize: "15px",
                           fontWeight: 600,
@@ -94,7 +94,7 @@ export function ExperiencePanel() {
                       </h3>
                       <p
                         style={{
-                          color: "#4ec9b0",
+                          color: "#c084fc",
                           fontFamily: "var(--font-sans)",
                           fontSize: "13px",
                           marginTop: "2px",
@@ -139,7 +139,7 @@ export function ExperiencePanel() {
                   <p
                     className="mb-4"
                     style={{
-                      color: "#9d9d9d",
+                      color: "#9d8fc0",
                       fontFamily: "var(--font-sans)",
                       fontSize: "13px",
                       lineHeight: 1.65,
@@ -155,9 +155,9 @@ export function ExperiencePanel() {
                         key={t}
                         className="px-2 py-0.5 rounded text-xs"
                         style={{
-                          background: "#1e293b",
-                          color: "#94a3b8",
-                          border: "1px solid #94a3b822",
+                          background: "#1a1230",
+                          color: "#a78bfa",
+                          border: "1px solid #a78bfa22",
                           fontFamily: "var(--font-mono)",
                         }}
                       >

@@ -38,7 +38,7 @@ export function TabBar({ openFiles, activeFile, onTabClick, onTabClose }: TabBar
               borderTop: isActive
                 ? "1px solid var(--color-vscode-accent)"
                 : "1px solid transparent",
-              color: isActive ? "#d4d4d4" : "var(--color-vscode-muted)",
+              color: isActive ? "#e4deff" : "var(--color-vscode-muted)",
             }}
             onClick={() => onTabClick(fileId)}
             onMouseEnter={(e) => {

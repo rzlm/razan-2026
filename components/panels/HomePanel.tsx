@@ -35,7 +35,7 @@ export function HomePanel({ onNavigate }: HomePanelProps) {
         <div className="flex flex-col gap-5">
           <p
             style={{
-              color: "#6a9955",
+              color: "#9d7fd4",
               fontFamily: "var(--font-mono)",
               fontSize: "13px",
             }}
@@ -45,7 +45,7 @@ export function HomePanel({ onNavigate }: HomePanelProps) {
 
           <h1
             style={{
-              color: "#d4d4d4",
+              color: "#e4deff",
               fontFamily: "var(--font-sans)",
               fontSize: "clamp(2.8rem, 5vw, 4.2rem)",
               fontWeight: 700,
@@ -55,12 +55,12 @@ export function HomePanel({ onNavigate }: HomePanelProps) {
           >
             {PROFILE.name.split(" ")[0]}
             <br />
-            <span style={{ color: "#4ec9b0" }}>{PROFILE.name.split(" ")[1]}</span>
+            <span style={{ color: "#c084fc" }}>{PROFILE.name.split(" ")[1]}</span>
           </h1>
 
           <p
             style={{
-              color: "#9cdcfe",
+              color: "#f0abfc",
               fontFamily: "var(--font-mono)",
               fontSize: "14px",
             }}
@@ -84,13 +84,13 @@ export function HomePanel({ onNavigate }: HomePanelProps) {
             <div
               className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs w-fit"
               style={{
-                background: "rgba(78,201,176,0.08)",
-                border: "1px solid rgba(78,201,176,0.25)",
-                color: "#4ec9b0",
+                background: "rgba(192,132,252,0.08)",
+                border: "1px solid rgba(192,132,252,0.25)",
+                color: "#c084fc",
                 fontFamily: "var(--font-mono)",
               }}
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-[#4ec9b0] animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#c084fc] animate-pulse" />
               Available for work
             </div>
           )}
@@ -130,7 +130,7 @@ export function HomePanel({ onNavigate }: HomePanelProps) {
                 }
               >
                 <span
-                  style={{ color: "#d4d4d4", fontFamily: "var(--font-mono)", fontSize: "13px" }}
+                  style={{ color: "#e4deff", fontFamily: "var(--font-mono)", fontSize: "13px" }}
                 >
                   {item.id}.tsx
                 </span>
@@ -185,8 +185,8 @@ export function HomePanel({ onNavigate }: HomePanelProps) {
                   onMouseEnter={(e) => {
                     const el = e.currentTarget as HTMLElement
                     el.style.background = "var(--color-vscode-hover)"
-                    el.style.color = "#d4d4d4"
-                    el.style.borderColor = "#007acc"
+                    el.style.color = "#e4deff"
+                    el.style.borderColor = "#c084fc"
                   }}
                   onMouseLeave={(e) => {
                     const el = e.currentTarget as HTMLElement

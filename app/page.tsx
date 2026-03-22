@@ -6,6 +6,7 @@ import { ActivityBar } from "@/components/ide/ActivityBar"
 import { Sidebar } from "@/components/ide/Sidebar"
 import { TabBar } from "@/components/ide/TabBar"
 import { StatusBar } from "@/components/ide/StatusBar"
+import { SearchOverlay } from "@/components/ide/SearchOverlay"
 import { HomePanel } from "@/components/panels/HomePanel"
 import { ProjectsPanel } from "@/components/panels/ProjectsPanel"
 import { ExperiencePanel } from "@/components/panels/ExperiencePanel"
@@ -28,6 +29,7 @@ export default function Page() {
   const [activeFile, setActiveFile] = useState<FileId>("home")
   const [openFiles, setOpenFiles] = useState<FileId[]>(["home"])
   const [sidebarOpen, setSidebarOpen] = useState(false)
+  const [searchOpen, setSearchOpen] = useState(false)
 
   const handleFileOpen = (id: FileId) => {
     if (!openFiles.includes(id)) {
@@ -67,10 +69,17 @@ export default function Page() {
       className="flex flex-col h-screen overflow-hidden"
       style={{ background: "var(--color-vscode-editor)", color: "#d4d4d4" }}
     >
+      {searchOpen && (
+        <SearchOverlay
+          onClose={() => setSearchOpen(false)}
+          onNavigate={handleFileOpen}
+        />
+      )}
+
       <TitleBar onMenuClick={() => setSidebarOpen((v) => !v)} />
 
       <div className="flex flex-1 overflow-hidden">
-        <ActivityBar />
+        <ActivityBar onSearchOpen={() => setSearchOpen(true)} />
 
         <Sidebar
           activeFile={activeFile}

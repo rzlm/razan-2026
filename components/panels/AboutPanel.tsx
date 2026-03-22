@@ -2,10 +2,10 @@ import { MapPin, Mail, Globe } from "lucide-react"
 import { PROFILE, SKILLS } from "@/lib/portfolio-data"
 
 const SKILL_COLORS: Record<string, string> = {
-  languages: "#569cd6",
-  frontend: "#4ec9b0",
-  backend: "#dcdcaa",
-  tooling: "#c586c0",
+  languages: "#c084fc",
+  frontend:  "#67e8f9",
+  backend:   "#e879f9",
+  tooling:   "#f472b6",
 }
 
 function CodeBlock({ children }: { children: React.ReactNode }) {
@@ -13,7 +13,7 @@ function CodeBlock({ children }: { children: React.ReactNode }) {
     <pre
       className="rounded-lg p-5 overflow-x-auto text-sm leading-relaxed"
       style={{
-        background: "#141414",
+        background: "#0a0814",
         border: "1px solid var(--color-vscode-border)",
         fontFamily: "var(--font-mono)",
       }}
@@ -23,14 +23,14 @@ function CodeBlock({ children }: { children: React.ReactNode }) {
   )
 }
 
-const kw = (s: string) => <span style={{ color: "#569cd6" }}>{s}</span>
-const str = (s: string) => <span style={{ color: "#ce9178" }}>{s}</span>
-const prop = (s: string) => <span style={{ color: "#9cdcfe" }}>{s}</span>
-const type = (s: string) => <span style={{ color: "#4ec9b0" }}>{s}</span>
-const cmt = (s: string) => <span style={{ color: "#6a9955" }}>{s}</span>
-const bool = (s: string) => <span style={{ color: "#569cd6" }}>{s}</span>
-const num = (s: string) => <span style={{ color: "#b5cea8" }}>{s}</span>
-const p = (s: string) => <span style={{ color: "#d4d4d4" }}>{s}</span>
+const kw   = (s: string) => <span style={{ color: "#c084fc" }}>{s}</span>
+const str  = (s: string) => <span style={{ color: "#f9a8d4" }}>{s}</span>
+const prop = (s: string) => <span style={{ color: "#f0abfc" }}>{s}</span>
+const type = (s: string) => <span style={{ color: "#67e8f9" }}>{s}</span>
+const cmt  = (s: string) => <span style={{ color: "#9d7fd4" }}>{s}</span>
+const bool = (s: string) => <span style={{ color: "#c084fc" }}>{s}</span>
+const num  = (s: string) => <span style={{ color: "#fda4af" }}>{s}</span>
+const p    = (s: string) => <span style={{ color: "#e4deff" }}>{s}</span>
 
 export function AboutPanel() {
   return (
@@ -43,9 +43,9 @@ export function AboutPanel() {
         className="text-xs mb-6"
         style={{ color: "var(--color-vscode-muted)", fontFamily: "var(--font-mono)" }}
       >
-        <span style={{ color: "#ce9178" }}>razan-portfolio</span>
-        <span style={{ color: "#6b6b6b" }}> › </span>
-        <span style={{ color: "#d4d4d4" }}>about.tsx</span>
+        <span style={{ color: "#f9a8d4" }}>razan-portfolio</span>
+        <span style={{ color: "#3d2f5e" }}> › </span>
+        <span style={{ color: "#e4deff" }}>about.tsx</span>
       </p>
 
       <div className="max-w-3xl grid lg:grid-cols-[1fr_320px] gap-10">
@@ -55,7 +55,7 @@ export function AboutPanel() {
             <h2
               className="mb-6"
               style={{
-                color: "#d4d4d4",
+                color: "#e4deff",
                 fontFamily: "var(--font-sans)",
                 fontSize: "1.75rem",
                 fontWeight: 700,
@@ -161,7 +161,7 @@ export function AboutPanel() {
                   <p
                     className="mb-2 capitalize"
                     style={{
-                      color: SKILL_COLORS[category] ?? "#d4d4d4",
+                      color: SKILL_COLORS[category] ?? "#e4deff",
                       fontFamily: "var(--font-mono)",
                       fontSize: "12px",
                       fontWeight: 600,
@@ -175,9 +175,9 @@ export function AboutPanel() {
                         key={skill}
                         className="px-2 py-0.5 rounded text-xs"
                         style={{
-                          background: "#1e293b",
-                          color: "#94a3b8",
-                          border: "1px solid #94a3b822",
+                          background: "#1a1230",
+                          color: "#a78bfa",
+                          border: "1px solid #a78bfa22",
                           fontFamily: "var(--font-mono)",
                         }}
                       >
@@ -197,13 +197,13 @@ export function AboutPanel() {
           <div
             className="w-full aspect-square max-w-[260px] rounded-xl flex items-center justify-center"
             style={{
-              background: "linear-gradient(135deg, #1e293b 0%, #0f172a 100%)",
+              background: "linear-gradient(135deg, #1a1230 0%, #0d0a1c 100%)",
               border: "1px solid var(--color-vscode-border)",
             }}
           >
             <span
               style={{
-                color: "#4ec9b0",
+                color: "#c084fc",
                 fontFamily: "var(--font-mono)",
                 fontSize: "4rem",
                 userSelect: "none",
@@ -217,7 +217,7 @@ export function AboutPanel() {
           <div className="flex flex-col gap-3">
             <p
               style={{
-                color: "#9d9d9d",
+                color: "#9d8fc0",
                 fontFamily: "var(--font-sans)",
                 fontSize: "14px",
                 lineHeight: 1.7,
@@ -227,7 +227,7 @@ export function AboutPanel() {
             </p>
             <p
               style={{
-                color: "#9d9d9d",
+                color: "#9d8fc0",
                 fontFamily: "var(--font-sans)",
                 fontSize: "14px",
                 lineHeight: 1.7,
@@ -270,7 +270,7 @@ export function AboutPanel() {
                   className="flex items-center gap-2 cursor-pointer transition-colors duration-150"
                   style={{ color: "var(--color-vscode-muted)", fontFamily: "var(--font-mono)", fontSize: "13px" }}
                   onMouseEnter={(e) =>
-                    ((e.currentTarget as HTMLElement).style.color = "#4ec9b0")
+                    ((e.currentTarget as HTMLElement).style.color = "#c084fc")
                   }
                   onMouseLeave={(e) =>
                     ((e.currentTarget as HTMLElement).style.color = "var(--color-vscode-muted)")

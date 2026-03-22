@@ -2,16 +2,16 @@ import { Clock, Tag, ArrowUpRight } from "lucide-react"
 import { ARTICLES } from "@/lib/portfolio-data"
 
 const TAG_COLORS: Record<string, { color: string; bg: string }> = {
-  React: { color: "#7dd3fc", bg: "#1e3a4a" },
+  React:              { color: "#7dd3fc", bg: "#1e1535" },
   "State Management": { color: "#c084fc", bg: "#2a1a3a" },
-  Performance: { color: "#fbbf24", bg: "#3a2a10" },
-  Accessibility: { color: "#4ade80", bg: "#1a3a2a" },
-  UI: { color: "#f472b6", bg: "#3a1a2a" },
-  "Tailwind CSS": { color: "#38bdf8", bg: "#1e3040" },
-  CSS: { color: "#38bdf8", bg: "#1e2a40" },
-  PostgreSQL: { color: "#a78bfa", bg: "#2a2040" },
-  Backend: { color: "#fb923c", bg: "#3a2010" },
-  TypeScript: { color: "#60a5fa", bg: "#1e2d4a" },
+  Performance:        { color: "#fbbf24", bg: "#3a2a10" },
+  Accessibility:      { color: "#4ade80", bg: "#1a3a2a" },
+  UI:                 { color: "#f472b6", bg: "#3a1a2a" },
+  "Tailwind CSS":     { color: "#67e8f9", bg: "#1a1a40" },
+  CSS:                { color: "#67e8f9", bg: "#1a1a40" },
+  PostgreSQL:         { color: "#a78bfa", bg: "#2a1a3a" },
+  Backend:            { color: "#fb923c", bg: "#3a2010" },
+  TypeScript:         { color: "#60a5fa", bg: "#1a1535" },
 }
 
 export function ArticlesPanel() {
@@ -25,15 +25,15 @@ export function ArticlesPanel() {
         className="text-xs mb-6"
         style={{ color: "var(--color-vscode-muted)", fontFamily: "var(--font-mono)" }}
       >
-        <span style={{ color: "#ce9178" }}>razan-portfolio</span>
-        <span style={{ color: "#6b6b6b" }}> › </span>
-        <span style={{ color: "#d4d4d4" }}>articles.tsx</span>
+        <span style={{ color: "#f9a8d4" }}>razan-portfolio</span>
+        <span style={{ color: "#3d2f5e" }}> › </span>
+        <span style={{ color: "#e4deff" }}>articles.tsx</span>
       </p>
 
       <h2
         className="mb-2"
         style={{
-          color: "#d4d4d4",
+          color: "#e4deff",
           fontFamily: "var(--font-sans)",
           fontSize: "1.75rem",
           fontWeight: 700,
@@ -92,17 +92,17 @@ export function ArticlesPanel() {
               <h3
                 className="transition-colors duration-150"
                 style={{
-                  color: "#d4d4d4",
+                  color: "#e4deff",
                   fontFamily: "var(--font-sans)",
                   fontSize: "15px",
                   fontWeight: 600,
                   lineHeight: 1.4,
                 }}
                 onMouseEnter={(e) =>
-                  ((e.currentTarget as HTMLElement).style.color = "#4ec9b0")
+                  ((e.currentTarget as HTMLElement).style.color = "#c084fc")
                 }
                 onMouseLeave={(e) =>
-                  ((e.currentTarget as HTMLElement).style.color = "#d4d4d4")
+                  ((e.currentTarget as HTMLElement).style.color = "#e4deff")
                 }
               >
                 {article.title}
@@ -110,14 +110,14 @@ export function ArticlesPanel() {
               <ArrowUpRight
                 size={16}
                 className="flex-shrink-0 mt-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-150"
-                style={{ color: "#4ec9b0" }}
+                style={{ color: "#c084fc" }}
               />
             </div>
 
             {/* Description */}
             <p
               style={{
-                color: "#858585",
+                color: "#7b6ea6",
                 fontFamily: "var(--font-sans)",
                 fontSize: "13px",
                 lineHeight: 1.65,
@@ -129,7 +129,7 @@ export function ArticlesPanel() {
             {/* Tags */}
             <div className="flex flex-wrap gap-1.5">
               {article.tags.map((tag) => {
-                const style = TAG_COLORS[tag] ?? { color: "#94a3b8", bg: "#1e293b" }
+                const style = TAG_COLORS[tag] ?? { color: "#a78bfa", bg: "#1a1230" }
                 return (
                   <span
                     key={tag}

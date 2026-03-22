@@ -87,7 +87,7 @@ export function Sidebar({ activeFile, onFileOpen, mobileOpen, onMobileClose }: S
                       className="flex items-center gap-2 w-full px-3 py-0.5 cursor-pointer transition-colors duration-100 text-left"
                       style={{
                         background: isActive ? "var(--color-vscode-active)" : "transparent",
-                        color: isActive ? "#d4d4d4" : "#cccccc",
+                        color: isActive ? "#e4deff" : "#c8b8f8",
                         fontFamily: "var(--font-mono)",
                         fontSize: "13px",
                         borderLeft: isActive
