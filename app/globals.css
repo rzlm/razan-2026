@@ -5,32 +5,32 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  /* Nebula palette */
-  --color-vscode-editor: #0f0c1a;
-  --color-vscode-sidebar: #130f23;
-  --color-vscode-activitybar: #0f0c1a;
-  --color-vscode-tabbar: #130f23;
-  --color-vscode-tab-active: #0f0c1a;
-  --color-vscode-titlebar: #1a1530;
-  --color-vscode-statusbar: #7c3aed;
-  --color-vscode-text: #e4deff;
-  --color-vscode-muted: #7b6ea6;
-  --color-vscode-accent: #c084fc;
-  --color-vscode-border: #2d1f4e;
-  --color-vscode-hover: #1e1636;
-  --color-vscode-active: #2a1d4a;
-  --color-vscode-selection: #4c1d95;
+  /* Velvet palette: #221c35 · #5a3a7e · #f67599 · #ffe3eb · #efc050 */
+  --color-vscode-editor: #221c35;
+  --color-vscode-sidebar: #2a1f44;
+  --color-vscode-activitybar: #221c35;
+  --color-vscode-tabbar: #2a1f44;
+  --color-vscode-tab-active: #221c35;
+  --color-vscode-titlebar: #2d2450;
+  --color-vscode-statusbar: #5a3a7e;
+  --color-vscode-text: #ffe3eb;
+  --color-vscode-muted: #8a6aa8;
+  --color-vscode-accent: #f67599;
+  --color-vscode-border: #3d2f60;
+  --color-vscode-hover: #2d2450;
+  --color-vscode-active: #3a2864;
+  --color-vscode-selection: #5a3a7e;
   /* Syntax tokens */
-  --color-vscode-keyword: #c084fc;
-  --color-vscode-string: #f9a8d4;
-  --color-vscode-fn: #e879f9;
-  --color-vscode-type: #67e8f9;
-  --color-vscode-comment: #9d7fd4;
-  --color-vscode-variable: #f0abfc;
-  --color-vscode-property: #f0abfc;
-  --color-vscode-number: #fda4af;
-  --color-vscode-operator: #e4deff;
-  --color-vscode-pink: #f472b6;
+  --color-vscode-keyword: #f67599;
+  --color-vscode-string: #efc050;
+  --color-vscode-fn: #ff9ab3;
+  --color-vscode-type: #ffc2d1;
+  --color-vscode-comment: #7a5a9e;
+  --color-vscode-variable: #ffe3eb;
+  --color-vscode-property: #ffe3eb;
+  --color-vscode-number: #efc050;
+  --color-vscode-operator: #ffe3eb;
+  --color-vscode-pink: #f67599;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);

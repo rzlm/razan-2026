@@ -2,12 +2,12 @@
 
 export const PROFILE = {
   name: "Razan Mohamed",
-  role: "Full-Stack Developer",
+  role: "Software Developer",
   tagline: "Building fast, beautiful, and accessible digital experiences.",
-  location: "Dubai, UAE",
-  email: "razan@example.com",
+  location: "Waterloo, ON",
+  email: "razan4424@gmail.com",
   github: "https://github.com/rzlm",
-  linkedin: "https://linkedin.com/in/razanmohamed",
+  linkedin: "https://www.linkedin.com/in/razan-mohamedd/",
   twitter: "https://twitter.com/razanmohamed",
   website: "https://razanmohamed.dev",
   available: true,

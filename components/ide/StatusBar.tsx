@@ -35,7 +35,7 @@ export function StatusBar({ activeFile }: StatusBarProps) {
         {PROFILE.available && (
           <span className="flex items-center gap-1 opacity-90">
             <Wifi size={11} />
-            Available for work
+            rzlm
           </span>
         )}
         <span>

@@ -1,6 +1,6 @@
 "use client"
 
-import { Github, Linkedin, Mail, Twitter, ArrowRight } from "lucide-react"
+import { Github, Linkedin, Mail, ArrowRight } from "lucide-react"
 import { PROFILE } from "@/lib/portfolio-data"
 import type { FileId } from "@/app/page"
 
@@ -19,7 +19,6 @@ const QUICK_OPEN: { id: FileId; desc: string }[] = [
 const SOCIAL = [
   { icon: Github, label: "GitHub", href: PROFILE.github },
   { icon: Linkedin, label: "LinkedIn", href: PROFILE.linkedin },
-  { icon: Twitter, label: "Twitter", href: PROFILE.twitter },
   { icon: Mail, label: "Email", href: `mailto:${PROFILE.email}` },
 ]
 
@@ -33,19 +32,13 @@ export function HomePanel({ onNavigate }: HomePanelProps) {
 
         {/* ── Left: Identity ───────────────────────────────────── */}
         <div className="flex flex-col gap-5">
-          <p
-            style={{
-              color: "#9d7fd4",
-              fontFamily: "var(--font-mono)",
-              fontSize: "13px",
-            }}
-          >
+          <p style={{ color: "var(--color-vscode-comment)", fontFamily: "var(--font-mono)", fontSize: "13px" }}>
             // hi there 👋
           </p>
 
           <h1
             style={{
-              color: "#e4deff",
+              color: "var(--color-vscode-text)",
               fontFamily: "var(--font-sans)",
               fontSize: "clamp(2.8rem, 5vw, 4.2rem)",
               fontWeight: 700,
@@ -55,16 +48,10 @@ export function HomePanel({ onNavigate }: HomePanelProps) {
           >
             {PROFILE.name.split(" ")[0]}
             <br />
-            <span style={{ color: "#c084fc" }}>{PROFILE.name.split(" ")[1]}</span>
+            <span style={{ color: "var(--color-vscode-accent)" }}>{PROFILE.name.split(" ")[1]}</span>
           </h1>
 
-          <p
-            style={{
-              color: "#f0abfc",
-              fontFamily: "var(--font-mono)",
-              fontSize: "14px",
-            }}
-          >
+          <p style={{ color: "var(--color-vscode-variable)", fontFamily: "var(--font-mono)", fontSize: "14px" }}>
             {PROFILE.role}
           </p>
 
@@ -84,14 +71,17 @@ export function HomePanel({ onNavigate }: HomePanelProps) {
             <div
               className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs w-fit"
               style={{
-                background: "rgba(192,132,252,0.08)",
-                border: "1px solid rgba(192,132,252,0.25)",
-                color: "#c084fc",
+                background: "color-mix(in srgb, var(--color-vscode-accent) 8%, transparent)",
+                border: "1px solid color-mix(in srgb, var(--color-vscode-accent) 25%, transparent)",
+                color: "var(--color-vscode-accent)",
                 fontFamily: "var(--font-mono)",
               }}
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-[#c084fc] animate-pulse" />
-              Available for work
+              {/* <span
+                className="w-1.5 h-1.5 rounded-full animate-pulse"
+                style={{ background: "var(--color-vscode-accent)" }}
+              /> */}
+              always open to new opportunities
             </div>
           )}
         </div>
@@ -129,19 +119,11 @@ export function HomePanel({ onNavigate }: HomePanelProps) {
                   ((e.currentTarget as HTMLElement).style.background = "var(--color-vscode-sidebar)")
                 }
               >
-                <span
-                  style={{ color: "#e4deff", fontFamily: "var(--font-mono)", fontSize: "13px" }}
-                >
+                <span style={{ color: "var(--color-vscode-text)", fontFamily: "var(--font-mono)", fontSize: "13px" }}>
                   {item.id}.tsx
                 </span>
                 <div className="flex items-center gap-1.5">
-                  <span
-                    style={{
-                      color: "var(--color-vscode-muted)",
-                      fontFamily: "var(--font-sans)",
-                      fontSize: "12px",
-                    }}
-                  >
+                  <span style={{ color: "var(--color-vscode-muted)", fontFamily: "var(--font-sans)", fontSize: "12px" }}>
                     {item.desc}
                   </span>
                   <ArrowRight
@@ -166,7 +148,7 @@ export function HomePanel({ onNavigate }: HomePanelProps) {
                 marginBottom: "12px",
               }}
             >
-              Connect
+              Connect with me
             </p>
             <div className="flex gap-2">
               {SOCIAL.map(({ icon: Icon, label, href }) => (
@@ -185,8 +167,8 @@ export function HomePanel({ onNavigate }: HomePanelProps) {
                   onMouseEnter={(e) => {
                     const el = e.currentTarget as HTMLElement
                     el.style.background = "var(--color-vscode-hover)"
-                    el.style.color = "#e4deff"
-                    el.style.borderColor = "#c084fc"
+                    el.style.color = "var(--color-vscode-text)"
+                    el.style.borderColor = "var(--color-vscode-accent)"
                   }}
                   onMouseLeave={(e) => {
                     const el = e.currentTarget as HTMLElement
