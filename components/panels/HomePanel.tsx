@@ -39,7 +39,7 @@ export function HomePanel({ onNavigate }: HomePanelProps) {
           <h1
             style={{
               color: "var(--color-vscode-text)",
-              fontFamily: "var(--font-sans)",
+              fontFamily: "var(--font-mono)",
               fontSize: "clamp(2.8rem, 5vw, 4.2rem)",
               fontWeight: 700,
               lineHeight: 1.08,
@@ -58,7 +58,7 @@ export function HomePanel({ onNavigate }: HomePanelProps) {
           <p
             style={{
               color: "var(--color-vscode-muted)",
-              fontFamily: "var(--font-sans)",
+              fontFamily: "var(--font-mono)",
               fontSize: "15px",
               lineHeight: 1.7,
               maxWidth: "38ch",
@@ -67,23 +67,7 @@ export function HomePanel({ onNavigate }: HomePanelProps) {
             {PROFILE.tagline}
           </p>
 
-          {PROFILE.available && (
-            <div
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs w-fit"
-              style={{
-                background: "color-mix(in srgb, var(--color-vscode-accent) 8%, transparent)",
-                border: "1px solid color-mix(in srgb, var(--color-vscode-accent) 25%, transparent)",
-                color: "var(--color-vscode-accent)",
-                fontFamily: "var(--font-mono)",
-              }}
-            >
-              {/* <span
-                className="w-1.5 h-1.5 rounded-full animate-pulse"
-                style={{ background: "var(--color-vscode-accent)" }}
-              /> */}
-              always open to new opportunities
-            </div>
-          )}
+       
         </div>
 
         {/* ── Right: Navigation + Socials ──────────────────────── */}

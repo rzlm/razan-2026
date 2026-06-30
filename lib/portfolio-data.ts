@@ -3,7 +3,7 @@
 export const PROFILE = {
   name: "Razan Mohamed",
   role: "Software Developer",
-  tagline: "Building fast, beautiful, and accessible digital experiences.",
+  tagline: "I’m passionate about building impactful technology through software development, AI, and data-driven solutions. ",
   location: "Waterloo, ON",
   email: "razan4424@gmail.com",
   github: "https://github.com/rzlm",
@@ -14,16 +14,16 @@ export const PROFILE = {
 }
 
 export const PROJECTS = [
-  {
-    id: 1,
-    name: "Nexus Dashboard",
-    description:
-      "A real-time analytics dashboard with live WebSocket data, customisable widgets, and role-based access control.",
-    tech: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Tailwind CSS"],
-    github: "https://github.com",
-    live: "https://example.com",
-    featured: true,
-  },
+  // {
+  //   id: 1,
+  //   name: "Nexus Dashboard",
+  //   description:
+  //     "Worked with startup founders to transform ideas into scalable software solutions and technical roadmaps. Supported consulting engagements, innovative AI initiatives, and internal tools while developing workflow automation and enterprise-grade software solutions aligned with university standards and compliance requirements.",
+  //   tech: ["", "TypeScript", "Prisma", "PostgreSQL", "Tailwind CSS"],
+  //   github: "https://github.com",
+  //   live: "https://example.com",
+  //   featured: true,
+  // },
   {
     id: 2,
     name: "OpenDeploy CLI",
@@ -79,47 +79,47 @@ export const PROJECTS = [
 export const EXPERIENCE = [
   {
     id: 1,
-    company: "Acme Corp",
-    role: "Senior Full-Stack Engineer",
-    period: "Jan 2023 – Present",
-    location: "Remote",
+    company: "Wilfrid Laurier University - StartUp Lab",
+    role: "Software Developer",
+    period: "Jan 2026 – Apr 2026",
+    location: "Waterloo, ON",
     description:
-      "Led architecture of a multi-tenant SaaS platform serving 50k+ users. Reduced p95 API latency by 60 % through query optimisation and edge caching.",
-    tech: ["Next.js", "Node.js", "PostgreSQL", "Redis", "AWS"],
-    type: "full-time",
+      "Worked with startup founders to transform ideas into scalable software solutions and technical roadmaps. Supported consulting engagements, innovative AI initiatives, and internal tools while developing workflow automation and enterprise-grade software solutions aligned with university standards and compliance requirements.",
+    tech: ["Next.js", "Node.js", "PostgreSQL", "Drizzle ORM", "AWS", "Microsoft Azure"],
+
   },
   {
     id: 2,
-    company: "Bright Labs",
-    role: "Frontend Engineer",
-    period: "Jun 2021 – Dec 2022",
-    location: "Dubai, UAE",
+    company: "Prism Resources",
+    role: "VP Training Services",
+    period: "Sept. 2025 – Aug. 2026",
+    location: "Waterloo, ON",
     description:
-      "Built and shipped a design system used across 8 product teams. Improved Lighthouse scores from 42 → 94 by implementing lazy loading and code-splitting strategies.",
+      "Led operations for student training programs serving 3,000+ students across courses in Finance, AI, coding, Power BI, Excel, Figma, and Google Analytics. Developed a Generative AI course in collaboration with university faculty and used Python to analyze program data and improve delivery.",
     tech: ["React", "TypeScript", "Figma", "Storybook", "Vite"],
     type: "full-time",
   },
   {
     id: 3,
-    company: "Freelance",
-    role: "UI/UX Developer",
+    company: "Definity Financial Corporation",
+    role: "ServiceNow Technical Writer",
     period: "Jan 2020 – May 2021",
-    location: "Remote",
+    location: "Waterloo, ON",
     description:
-      "Designed and developed 15+ client websites across e-commerce, SaaS, and marketing verticals. Maintained 100 % on-time delivery and 5 ★ client rating.",
+      "Created technical documentation, onboarding guides, and workflow documentation for ServiceNow and RPA systems. Collaborated with technical teams to simplify complex processes for both technical and non-technical audiences.",
     tech: ["React", "Next.js", "Figma", "Tailwind CSS", "Webflow"],
-    type: "contract",
+
   },
   {
     id: 4,
-    company: "TechStart",
-    role: "Junior Developer Intern",
-    period: "Jun 2019 – Dec 2019",
-    location: "Dubai, UAE",
+    company: "Civiconnect",
+    role: "Web Developer",
+    period: "Sept 2024 – Dec 2024",
+    location: "Beamsville, ON",
     description:
-      "Contributed to an internal CRM tool — implemented REST API integrations and built reusable React components consumed across the product.",
+      "Collaborated on full-stack web applications using React, Next.js, and StrapiCMS. Assisted with API testing, integrations, and building reliable user-focused web experiences.",
     tech: ["React", "REST APIs", "CSS Modules"],
-    type: "internship",
+   
   },
 ]
 
